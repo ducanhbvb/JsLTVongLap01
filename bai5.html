@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+<script>
+    let tong=check=fibonacci1 = 0;
+    let fibonacci2 = 1;
+    let tg = 1;
+    do {
+        tg = fibonacci2;
+        fibonacci2 = fibonacci1 + fibonacci2;
+        fibonacci1 = tg;
+        check++;
+        tong+=fibonacci1
+        document.write(" " + check + "=" + fibonacci1);
+    } while (check < 20)
+    document.write("tổng 20 số là"+tong);
+</script>
+</body>
+</html>

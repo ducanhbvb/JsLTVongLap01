@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+<script>
+    let check=fibonacci1 = 0;
+    let fibonacci2 = 1;
+    let tg = 1;
+    do {
+        tg = fibonacci2;
+        fibonacci2 = fibonacci1 + fibonacci2;
+        fibonacci1 = tg;
+        check++;
+        document.write(" " + check + "=" + fibonacci1);
+    } while (check < 20)
+    document.write("end");
+</script>
+</body>
+</html>
