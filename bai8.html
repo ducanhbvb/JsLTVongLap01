@@ -5,7 +5,42 @@
     <title>doanSo</title>
 </head>
 <body>
-<button type="button"onclick="paly()">Play</button>
+<h1><p>Hay Thu Doan Xem</p></h1>
+<button type="button" onclick="play()">Play</button>
+<script>
+    function kt(result) {
+        let i = 0;
+        while (i < 3) {
+            let number = parseInt(prompt("nhap so du doan"));
+            switch (true) {
+                case (number === result): {
+                    alert("ban that may man");
+                    check = false;
+                    i = 3;
+                    break;
+                }
+                case (number > result):
+                    alert("ba  da nhap vào so lớn hơn ");
+                    break;
+                case (number < result):
+                    alert("ban da nhập vào so nhỏ hơn");
+                    break;
+            }
+            i++;
+        }
+    }
+    function play() {
+        let min = parseInt(prompt("nhap min"));
+        let max = parseInt(prompt("nhap max"));
+        let check = true;
+        let result = Math.floor(Math.random() * max) + min;
+        kt(result);
+        if (check) {
+            alert("bạn đã hết số lượt chơi");
+            alert(result);
+        }
+    }
+</script>
 
 </body>
 </html>
